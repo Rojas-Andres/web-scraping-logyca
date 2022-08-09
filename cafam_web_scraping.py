@@ -10,7 +10,7 @@ def remove_spaces(item):
 
 def export_csv(data):
     df = pd.DataFrame(data) 
-    df.to_csv("datos.csv")
+    df.to_csv("datos.csv",index=False)
 
 def web_scraping():
     data = {
@@ -31,10 +31,8 @@ def web_scraping():
             url = soup.find('div',attrs={"class":"product_list"}).find('a',attrs={"rel":"next"}).get("href")
         except AttributeError:
             break
-        print(data)
     return data 
 
 if __name__ == "__main__":
-    print("hola entre")
     data = web_scraping()
     export_csv(data)
