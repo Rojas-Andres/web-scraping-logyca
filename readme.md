@@ -18,3 +18,9 @@ o en cmd
 ## Instalar las librerias
 
 pip install -r requirements.txt
+
+## Formatear codigo con black
+
+black cafam_web_scraping.py
+
+https://www.geeksforgeeks.org/python-code-formatting-using-black/
